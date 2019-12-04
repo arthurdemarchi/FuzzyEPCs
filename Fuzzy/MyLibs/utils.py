@@ -82,37 +82,6 @@ def subplot(sets_of_regions, titles, write=False, file='figura.png'):
 		plt.pause(5)
 		plt.close()
 
-# def plot_individual(regions, title, write=False, file='figura.png'):
-# 		if type(regions) == Region:
-# 			plot(regions, title, write=write, file=file)
-
-# 		number_of_plots = len(regions)
-# 		frame = ceil(sqrt(number_of_plots))
-
-# 		if type(regions) == list:
-# 			for each_region in region:
-# 				x = []
-# 				y = []
-# 				for item in each_region.fuzzy:
-# 					x.append(item['x'])
-# 					y.append(item['u'])
-# 				plt.scatter(x, y, s=0.1, alpha=1)
-
-# 		plt.title(title)
-# 		plt.xlabel(x_label)
-# 		plt.ylabel(y_label)
-# 		plt.xlim(left=0)
-# 		plt.ylim(bottom=0)
-
-# 		if write:
-# 			plt.savefig(file)
-# 			plt.close()
-
-# 		else:
-# 			plt.show(block=False)
-# 			plt.pause(5)
-# 			plt.close()
-
 def print_names(regions):
 	for region in regions:
 		print(region.name, end=', ')

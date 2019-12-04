@@ -15,7 +15,7 @@ pontos de interesse da função (dependendo do tipo de função).
 
 import math
 class Region:
-	def __init__(self, name, npoints, universe_size, region_min, region_max, region_type, trap_init=None, trap_end=None, alfa_cut_fuzzy=None, universe_init=0):
+	def __init__(self, name, npoints, universe_size, region_min, region_max, region_type, trap_init=None, trap_end=None, alfa_cut_fuzzy=None, universe_init=0, centered='None'):
 		"""Constructor
 
 		Arguments:
@@ -39,7 +39,10 @@ class Region:
 		self.region_max = region_max
 		self.region_type = region_type
 		self.region_size = region_max - region_min
-		self.region_center = self.region_min + self.region_size/2
+		if centered == None:
+			self.region_center = self.region_min + self.region_size/2
+		else:
+			self.region_center = centered
 
 		if self.region_type == 'trapezoid':
 			self.trap_init = trap_init
